@@ -1,0 +1,22 @@
+{
+  "base_model_name": "bert-base-uncased",
+  "preprocessing":{
+    "data_path": "./data/format.csv",
+    "maxlen": 32,
+    "vocab_ner": "ner2idx.json",
+    "vocab_pos": "pos2idx.json",
+    "random_state": 42,
+    "test_size": 0.3,
+    "out_path": "./data"
+  },
+  "train": {
+    "epochs": 10,
+    "total_steps": 1000,
+    "FULL_FINETUNING": true,
+    "lr": 3e-5,
+    "max_grad_norm": 1.0,
+    "is_save_metric": true,
+    "batch_size": 32,
+    "eps": 1e-8
+  }
+}
