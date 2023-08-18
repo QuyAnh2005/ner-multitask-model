@@ -32,6 +32,7 @@ attention_masks = [[int(idx > 0) for idx in seq] for seq in tokenized_sentences]
 tokenized_poss = pad_sequences(pos_sentences, maxlen, pos2idx)
 tokenized_ners = pad_sequences(ner_sentences, maxlen, ner2idx)
 
+# Test with first 100 examples
 train_inputs, val_inputs, train_masks, val_masks, train_poss, val_poss, train_ners, val_ners = train_test_split(
     tokenized_sentences[:100],
     attention_masks[:100],
