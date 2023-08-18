@@ -10,8 +10,11 @@ maxlen = hps.preprocessing.maxlen
 # Get pre-trained tokenizer
 tokenizer = BertTokenizer.from_pretrained(hps.base_model_name)
 sentences, pos_sentences, ner_sentences = read_file(hps.preprocessing.data_path)
-ner2idx, idx2ner = _tag_idx(ner_sentences, file_name=hps.preprocessing.vocab_ner)
-pos2idx, idx2pos = _tag_idx(pos_sentences, file_name=hps.preprocessing.vocab_pos)
+
+vocab_ner_path = f"{hps.preprocessing.out_path}/{hps.preprocessing.vocab_ner}"
+vocab_pos_path = f"{hps.preprocessing.out_path}/{hps.preprocessing.vocab_pos}"
+ner2idx, idx2ner = _tag_idx(ner_sentences, file_name=vocab_ner_path)
+pos2idx, idx2pos = _tag_idx(pos_sentences, file_name=vocab_pos_path)
 
 # update the number of ner tags and pos tags in parameters
 hps.n_pos = len(pos2idx)
