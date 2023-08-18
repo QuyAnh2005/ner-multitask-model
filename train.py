@@ -63,8 +63,7 @@ def train(model, train_dataloader, optimizer, scheduler, criterion, clip):
     avg_train_accuracy_pos = train_accuracy_pos / nb_train
     avg_train_f1_ner = train_f1_ner / nb_train
     avg_train_f1_pos = train_f1_pos / nb_train
-    # print("Averages of train loss: {}, loss ner: {}, and loss_pos: {}".format(
-    #     avg_train_loss, avg_train_loss_ner, avg_train_loss_pos))
+
     return avg_train_loss, avg_train_loss_ner, avg_train_loss_pos, \
            avg_train_accuracy_ner, avg_train_accuracy_pos, \
            avg_train_f1_ner, avg_train_f1_pos
@@ -106,8 +105,7 @@ def evaluate(model, valid_dataloader, criterion):
     avg_eval_accuracy_pos = eval_accuracy_pos / nb_eval
     avg_eval_f1_ner = eval_f1_ner / nb_eval
     avg_eval_f1_pos = eval_f1_pos / nb_eval
-    # print("Averages of valid loss: {}, loss ner: {}, and loss_pos: {}".format(
-    #     avg_eval_loss, avg_eval_loss_ner, avg_eval_loss_pos))
+
     return avg_eval_loss, avg_eval_loss_ner, avg_eval_loss_pos, \
            avg_eval_accuracy_ner, avg_eval_accuracy_pos, \
            avg_eval_f1_ner, avg_eval_f1_pos
