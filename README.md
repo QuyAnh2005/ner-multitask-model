@@ -8,10 +8,10 @@ pip install -r requirements.txt
 
 - Preprocessing data
 ```python
-python preprocessing.py
+python preprocessing.py -c configs/base.json -m pos-ner
 ```
 
 ## Training Example
 ```python
-python train.py
+python train.py -c configs/base.json -m pos-ner
 ```
