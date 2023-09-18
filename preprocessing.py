@@ -2,7 +2,7 @@ import numpy as np
 
 from transformers import BertTokenizer
 from sklearn.model_selection import train_test_split
-from util import read_file, _tag_idx, pad_sequences, get_hparams
+from utils import read_file, _tag_idx, pad_sequences, get_hparams
 
 hps = get_hparams()
 maxlen = hps.preprocessing.maxlen

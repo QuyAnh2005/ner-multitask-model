@@ -1,6 +1,6 @@
 import torch
 from sklearn.metrics import f1_score
-from util import PAD_token
+from utils import PAD_token
 
 def flat_accuracy(output, target):
     preds = output.argmax(dim=2)

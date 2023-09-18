@@ -6,7 +6,7 @@ from transformers import AdamW, get_linear_schedule_with_warmup
 from tqdm import tqdm, trange
 from model import NeurondBERTMultitask
 from dataloader import MultiDataset
-from util import load_from_path, get_hparams, get_number_vocab
+from utils import load_from_path, get_hparams, get_number_vocab
 from metrics import flat_accuracy, f1_score_seq
 
 
